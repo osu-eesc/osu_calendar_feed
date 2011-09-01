@@ -1,0 +1,17 @@
+div#block-views-osu_calendar-block_1.block div.inner div.content div.view div.view-content div.item-list h3 {
+  font-size: 1.0em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: -0.25em;
+}
+
+
+div.calendar-event-date fieldset.fieldgroup legend {
+  font-weight: normal;
+  text-transform: none;
+}
+
+div.calendar-event-date fieldset.fieldgroup div.calendar-date {
+  font-weight: bold;
+}
+

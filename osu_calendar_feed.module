@@ -1,0 +1,29 @@
+<?php
+
+include_once('osu_calendar_feed.features.inc');
+
+/**
+ * Implementation of hook_init().
+ */
+function osu_calendar_feed_init() {
+  drupal_add_css(drupal_get_path('module', 'osu_calendar_feed') .'/theme/osu_calendar_feed.css');
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+ 
+function osu_calendar_feed_preprocess_node(&$variables) {
+  if ($variables['node']->type == 'osu_calendar_feed') {
+    $variables['template_file'] = 'osu_calendar_feed';
+  }
+}
+
+
+/**
+ * Implementation of hook_theme_registry_alter().
+ */
+function osu_calendar_feed_theme_registry_alter(&$theme_registry) {
+  $modulepath = drupal_get_path('module', 'osu_calendar_feed') . '/theme';
+  array_unshift($theme_registry['node']['theme paths'], $modulepath);
+}
