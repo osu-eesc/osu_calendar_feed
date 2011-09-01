@@ -1,0 +1,55 @@
+<?php
+// $Id: osu_calendar_feed.install
+
+/**
+* Implementation of hook_install()
+*/
+
+function osu_calendar_feed_install() {
+  $data1 = array(
+    'format' => 'D, M j, Y',
+    'type' => 'custom'
+  );
+  drupal_write_record('date_formats', $data1);
+  
+  $data2 = array(
+    'format' => 'g:i a',
+    'type' => 'custom'
+  );
+  drupal_write_record('date_formats', $data2);
+  
+  $data3 = array(
+    'format' => 'l, F j, Y - g:ia',
+    'type' => 'custom'
+  );
+  drupal_write_record('date_formats', $data3);
+  
+  $data4 = array(
+    'type' => 'calendar_date',
+    'title' => 'Calendar Day Month Year'
+  );
+  drupal_write_record('date_format_types', $data4);
+  
+  $data5 = array(
+    'type' => 'calendar_time',
+    'title' => 'Calendar Time'
+  );
+  drupal_write_record('date_format_types', $data5);
+  
+  $data6 = array(
+    'type' => 'calendar_date_time',
+    'title' => 'Full Calendar date time'
+  );
+  drupal_write_record('date_format_types', $data6);
+  
+  variable_set('date_format_calendar_date', 'D, M j, Y');
+  variable_set('date_format_calendar_time', 'g:i a');
+  variable_set('date_format_calendar_date_time', 'l, F j, Y - g:ia');
+  
+}
+
+/**
+* Implementation of hook_uninstall()
+* TODO: add uninstall
+*/
+
