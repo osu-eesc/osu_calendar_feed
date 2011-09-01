@@ -27,7 +27,8 @@ dependencies[] = "views"
 
 Installation:
 --------------------
-- Copy the unpacked folder "osu_calendar_feed" in your modules folder (usually [base_path]/sites/all/modules).
+1.  Copy the unpacked folder "osu_calendar_feed" in your modules folder (usually [base_path]/sites/all/modules).
+2.  Enable module.
 
 Usage:
 --------------------
@@ -35,6 +36,6 @@ Usage:
 2.  Go to http://example.com/import/calendar_feeds
 3.  In the URL field enter "http://calendar.oregonstate.edu/today+90/list/[calendar shortname]/events.xml" replacing the [calendar short name] with the appropriate shortname for your calendar
 4.  The module uses a modified version of the view created by the calendar module.
-5.  Intended to be used with the Extension theme (which was cloned from acquia_prosper)
+5.  Intended to be used with the Extension theme (which was cloned from acquia_prosper).
   
 
